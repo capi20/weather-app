@@ -48,6 +48,13 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: "404",
+        errorMessage: "Page not found."
+    })
+})
+
 const port = process.env.port || 3000
 const server = app.listen(port, () => {
     console.log(`App running on port ${port}...`)

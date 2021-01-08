@@ -1,24 +1,25 @@
 body{
     color: #333333;
     font-family: arial;
-    max-width: 650px;
     margin: 0 auto;
-    padding: 0 16px;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh
 }
 
-.main-content{
+.content-box{
     flex-grow: 1;
+    margin: 0 30px;
+    text-align: center;
 }
 
 footer{
     color: #888888;
-    border-top: 1px solid #eeeeee;
+    background-color: #f4f4f4;
+    border-top: 1px solid #f4f4f4;
     margin-top: 16px;
     padding: 16px 0;
+    text-align: center;
 }
 
 header{
@@ -31,19 +32,19 @@ h1{
     margin-bottom: 16px;
 }
 
-header a{
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
-}
-
 .portrait{
     width: 250px;
 }
 
+form {
+    margin-bottom: 50px;
+}
+
 input{
     border: 1px solid #cccccc;
-    padding: 8px;
+    padding: 10px 15px;
+    width: 20%;
+    font-size: 15px;
 }
 
 button{
@@ -51,5 +52,9 @@ button{
     border: 1px solid #888888;
     background: #888888;
     color: white;
-    padding: 8px;
+    padding: 10px;
+    font-size: 15px;
 }
+
+button:focus{ outline: none; }
+input:focus{ outline: none; }
