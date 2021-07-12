@@ -1,49 +1,88 @@
-body{
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-.main-content{
-    flex-grow: 1;
+html {
+    font-size: 62.5%; 
 }
 
-footer{
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: #777;
+
+    box-sizing: border-box;
 }
 
-header{
-    margin-top: 16px;
-    margin-bottom: 48px;
+main{
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(35, 37, 38, 0.9), 
+        rgba(65, 67, 69, 0.9)), 
+    url(/img-1.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.main-content {
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-heading{
+    margin-top: 1.6rem;
+    margin-bottom: 5rem;
 }
 
 h1{
-    font-size: 64px;
-    margin-bottom: 16px;
+    font-size: 6rem;
+    color: #fff;
 }
 
-header a{
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
+.form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 40%;
+    display: inline-block;
+    transition: all .3s;
 }
 
-.portrait{
-    width: 250px;
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(#000, .1);
+    border-bottom: 3px solid #55c57a;
 }
 
-input{
-    border: 1px solid #cccccc;
-    padding: 8px;
+.form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #999
+}
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
 }
 
 button{
@@ -51,5 +90,25 @@ button{
     border: 1px solid #888888;
     background: #888888;
     color: white;
-    padding: 8px;
+    padding: 1.3rem;
+    font-size: 1.8rem;
+    transition: all .2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.messages {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 5rem;
+}
+
+footer{
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #111;
+    color: #eee;
+    padding: 5rem;
 }
