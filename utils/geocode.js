@@ -1,10 +1,13 @@
 const axios = require('axios')
+const dotenv = require('dotenv')
+
+dotenv.config({ path: './config.env' })
 
 const geocode = async (address, callback) => {
     try {
         const res = await axios({
             method: 'get',
-            url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=pk.eyJ1Ijoic2h5YW0tMjAiLCJhIjoiY2tqbW02cjJmMHpieTJzczJvdHZscHVhaSJ9.ZN1753kbXXQHs8q2bba1Ow`
+            url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${process.env.GEOCODE_KEY}`
         })
         if (res.data.features.length > 0) {
             callback(undefined, {

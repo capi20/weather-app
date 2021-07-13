@@ -48,18 +48,21 @@ main{
 
 h1{
     font-size: 6rem;
-    color: #fff;
+    background-image: linear-gradient(to right, #348F50,#56B4D3);
+    color: transparent;
+    -webkit-background-clip: text;
+
 }
 
 .form__input {
     font-size: 1.5rem;
     font-family: inherit;
     color: inherit;
-    padding: 1.5rem 2rem;
+    padding: 1.45rem 2rem;
     border-radius: 2px;
     background-color: #fff;
     border: none;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
     width: 40%;
     display: inline-block;
     transition: all .3s;
@@ -67,7 +70,7 @@ h1{
 
 .form__input:focus {
     outline: none;
-    box-shadow: 0 1rem 2rem rgba(#000, .1);
+    box-shadow: 0 rem 2rem rgba(#000, .1);
     border-bottom: 3px solid #55c57a;
 }
 
@@ -88,6 +91,7 @@ h1{
 button{
     cursor: pointer;
     border: 1px solid #888888;
+    border-radius: 6px;
     background: #888888;
     color: white;
     padding: 1.3rem;
