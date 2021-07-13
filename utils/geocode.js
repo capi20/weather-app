@@ -19,7 +19,7 @@ const geocode = async (address, callback) => {
             callback('Unable to find location. Try another search.', undefined)
         }
     } catch (err) {
-        callback('Unable to connect to location services!', undefined)
+        callback('Unable to connect to location services! Please check your internet connection.', undefined)
     }
 }
 
