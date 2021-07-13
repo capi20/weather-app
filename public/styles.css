@@ -24,7 +24,7 @@ main{
     height: 100vh;
     background-image: linear-gradient(
         to right bottom, 
-        rgba(35, 37, 38, 0.9), 
+        rgba(35, 37, 38, 0.8), 
         rgba(65, 67, 69, 0.9)), 
     url(/img-1.jpg);
     background-size: cover;
@@ -36,13 +36,12 @@ main{
     text-align: center;
     width: 50%;
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 .main-heading{
-    margin-top: 1.6rem;
     margin-bottom: 5rem;
 }
 
@@ -51,7 +50,6 @@ h1{
     background-image: linear-gradient(to right, #348F50,#56B4D3);
     color: transparent;
     -webkit-background-clip: text;
-
 }
 
 .form__input {
@@ -96,17 +94,19 @@ button{
     color: white;
     padding: 1.3rem;
     font-size: 1.8rem;
-    transition: all .2s;
+    transition: transform .5s;
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background-image: linear-gradient(to right, #348F50,#56B4D3);
 }
 
 .messages {
+    text-align: center;
     font-size: 2rem;
     color: #fff;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 footer{
