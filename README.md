@@ -6,6 +6,11 @@ Mapbox-- https://www.mapbox.com/
 
 DarkSky-- https://darksky.net/dev
 
-To run this project in development mode, you can run
+## Available Scripts
 
-npm run dev
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
