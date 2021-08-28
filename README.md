@@ -7,4 +7,4 @@ Mapbox-- https://www.mapbox.com/
 DarkSky-- https://darksky.net/dev
 
 To run this project in development mode, you can run
-# npm run dev
+npm run dev
